@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="14490.70" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="AgC-eL-Hgc">
+    <device id="watch38" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="watchOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="14490.21"/>
+    </dependencies>
+    <scenes>
+        <!--Interface Controller-->
+        <scene sceneID="aou-V4-d1y">
+            <objects>
+                <controller id="AgC-eL-Hgc" customClass="InterfaceController" customModule="Tabuada_WatchKit_Extension">
+                    <items>
+                        <slider width="1" alignment="left" maximum="10" steps="10" id="DWb-3Z-sx0">
+                            <connections>
+                                <action selector="sliderSelecionado:" destination="AgC-eL-Hgc" id="y1S-Vn-9KF"/>
+                            </connections>
+                        </slider>
+                        <table alignment="left" id="VAN-xU-wcL">
+                            <items>
+                                <tableRow identifier="TabuadaRowController" id="8sB-9U-nA5" customClass="TabuadaRowController" customModule="Tabuada_WatchKit_Extension">
+                                    <group key="rootItem" width="1" alignment="left" id="5ha-Rd-OTb">
+                                        <items>
+                                            <label width="1" alignment="left" verticalAlignment="center" text="texto" id="2Ws-zB-tbx"/>
+                                        </items>
+                                    </group>
+                                    <connections>
+                                        <outlet property="texto" destination="2Ws-zB-tbx" id="6M5-ka-4d4"/>
+                                    </connections>
+                                </tableRow>
+                            </items>
+                        </table>
+                    </items>
+                    <connections>
+                        <outlet property="slider" destination="DWb-3Z-sx0" id="cTG-37-wOS"/>
+                        <outlet property="table" destination="VAN-xU-wcL" id="xMN-Yw-Ack"/>
+                    </connections>
+                </controller>
+            </objects>
+        </scene>
+    </scenes>
+</document>
